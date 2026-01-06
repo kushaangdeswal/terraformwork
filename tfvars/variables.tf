@@ -13,3 +13,8 @@ variable "instance_name" {
     type        = string
     default     = "AppServerInstance"
 }
+variable "secret_key" {
+    description = "AWS secret key"
+    type        = string
+    sensitive   = true
+}
