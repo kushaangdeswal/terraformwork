@@ -27,3 +27,10 @@ resource "aws_eip" "ip" {
 resource "aws_s3_bucket" "example" {
 
 }
+
+module "example_sqs_queue" {
+    source = "terraform-aws-modules/sqs/aws"
+    version = "~> 3.0"
+
+    name = "example-queue"
+}
